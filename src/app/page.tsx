@@ -145,7 +145,7 @@ export default function Home() {
 
     useEffect(() => {
         updateFilteredItems();
-    }, [selectFilters]);
+    }, [selectFilters, updateFilteredItems]);
 
     const updateFilteredItems = () => {
         if (selectFilters.length > 0) {
