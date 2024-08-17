@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 // import Image from "next/image";
 
 // import {items} from  "./items";
@@ -38,7 +39,7 @@
 //   return (
 //     <main className="items-center justify-between">
 //       <div className="">
-//       <img src="https://cdn.shopify.com/s/files/1/0646/0211/2255/files/rakhi2024.png?v=1721390384" alt="" className="w-full h-auto " />
+//       <image src="https://cdn.shopify.com/s/files/1/0646/0211/2255/files/rakhi2024.png?v=1721390384" alt="" className="w-full h-auto " />
 //       </div>
 
 
@@ -218,42 +219,42 @@ export default function Home() {
 
             <div className="grid grid-cols-4 gap-4 p-2 text-center">
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/aa154eca255fcd4217dc50a29d1392e4.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/aa154eca255fcd4217dc50a29d1392e4.webp" alt="" />
                 <p>Sets Boys</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/a8657c7a31ae4bb016473d7b153c0f27.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/a8657c7a31ae4bb016473d7b153c0f27.webp" alt="" />
                 <p>T-shirts</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/59782e7a30ba07d9dfbd4e331d735e23.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/59782e7a30ba07d9dfbd4e331d735e23.webp" alt="" />
                 <p>Shirts</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/8259d544f0463145461df9340a1ace73.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/8259d544f0463145461df9340a1ace73.webp" alt="" />
                 <p>Denims</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/a64656ada198a6dce273a31ef45a228a.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/a64656ada198a6dce273a31ef45a228a.webp" alt="" />
                 <p>Partywear</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/c6f25f9dc1f0f0a1cdefc08a650dade0.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/c6f25f9dc1f0f0a1cdefc08a650dade0.webp" alt="" />
                 <p>Shorts & Bermudas</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/74e29d86077cff1b052030c5fd192bd6.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/74e29d86077cff1b052030c5fd192bd6.webp" alt="" />
                 <p>Sportswear</p>
               </div>
 
               <div>
-                <img src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/5800f6b80695776a25f177294678607c.webp" alt="" />
+                <Image src="https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/5800f6b80695776a25f177294678607c.webp" alt="" />
                 <p>Accessories</p>
               </div>
             </div>
