@@ -115,13 +115,13 @@ import Image from "next/image";
 
 
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 
 export default function Home() {
     const [selectFilters, setSelectFilters] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
     
-    const items = [ 
+    const items = useMemo(() => [ 
         { name: 'Girls Satin High-Low...', price: '₹2,849', content: 'content1', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/dddd1b2865e4743e17154b21575f4f4d.webp", category: 'girl' },
         { name: 'Boys Lapel Brown Plaid...', price: '₹2,399', content: 'content2', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/dabfff17047b2d76c845a69dd57ec88a.webp", category: 'boy' },
         { name: 'Girls Red Embroidered...', price: '₹2,099', content: 'content3', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/629d9a36e5947ea88236f8c99ff5cd3e.webp", category: 'girl' },
@@ -131,7 +131,7 @@ export default function Home() {
         { name: 'Girls Pink Flower Mesh...', price: '₹1,999', content: 'content7', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/7caafa516303bc3c1d88cac1669b5491.webp", category: 'girl' },
         { name: 'Girls Pink Flower Mesh...', price: '₹1,999', content: 'content8', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/fd5aae85fbccc0bff5296ea5d302a1ee.webp", category: 'boy' },
         // { name: 'Girls Pink Fluffy Ombre...', price: '₹2,299', content: 'content9', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/a3479348360431eff835642d0701f880.webp", category: 'girl' },
-    ];
+    ], []);
     
     const filters = ["boy", "girl"];
 
@@ -168,7 +168,7 @@ export default function Home() {
     return (
         <main className="items-center justify-between">
             <div className="h-100 overflow-hidden">
-                <img src="https://cdn.shopify.com/s/files/1/0646/0211/2255/files/character_shop_msite.jpg?v=1719821091" alt="" className="w-full h-auto" />
+                <Image src="https://cdn.shopify.com/s/files/1/0646/0211/2255/files/character_shop_msite.jpg?v=1719821091" alt="" className="w-full h-auto" />
             </div>
 
             <div className="p-5">
