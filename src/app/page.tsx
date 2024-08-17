@@ -128,7 +128,7 @@ type Item = {
 
 export default function Home() {
     const [selectFilters, setSelectFilters] = useState<string[]>([]);
-    const [filteredItems, setFilteredItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState<Item[]>([]);
 
     
     const items: Item[] = useMemo(() => [
