@@ -118,7 +118,7 @@ import Image from "next/image";
 import { useEffect, useState, useCallback, useMemo } from "react";
 
 export default function Home() {
-    const [selectFilters, setSelectFilters] = useState([]);
+    const [selectFilters, setSelectFilters] = useState<string[]>([]);
     const [filteredItems, setFilteredItems] = useState([]);
     
     const items = useMemo(() => [ 
