@@ -134,7 +134,7 @@ export default function Home() {
     
     const filters = ["boy", "girl"];
 
-    const handleFilterClick = (selectedCategory) => {
+    const handleFilterClick = (selectedCategory: string) => {
         if (selectFilters.includes(selectedCategory)) {
             const updatedFilters = selectFilters.filter((el) => el !== selectedCategory);
             setSelectFilters(updatedFilters);
