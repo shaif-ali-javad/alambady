@@ -117,11 +117,21 @@ import Image from "next/image";
 
 import { useEffect, useState, useCallback, useMemo } from "react";
 
+type Item = {
+    name: string;
+    price: string;
+    content: string;
+    img: string;
+    category: string;
+};
+
+
 export default function Home() {
     const [selectFilters, setSelectFilters] = useState<string[]>([]);
     const [filteredItems, setFilteredItems] = useState([]);
+
     
-    const items = useMemo(() => [ 
+    const items = Item[] = useMemo(() => [
         { name: 'Girls Satin High-Low...', price: '₹2,849', content: 'content1', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/dddd1b2865e4743e17154b21575f4f4d.webp", category: 'girl' },
         { name: 'Boys Lapel Brown Plaid...', price: '₹2,399', content: 'content2', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/dabfff17047b2d76c845a69dd57ec88a.webp", category: 'boy' },
         { name: 'Girls Red Embroidered...', price: '₹2,099', content: 'content3', img: "https://dxtqjdp4acos7.cloudfront.net/images/scale/2x/629d9a36e5947ea88236f8c99ff5cd3e.webp", category: 'girl' },
@@ -156,14 +166,14 @@ export default function Home() {
         updateFilteredItems();
     }, [selectFilters, items]);
 
-    const updateFilteredItems = () => {
+    const updateFilteredItems = useCallback(() => {
         if (selectFilters.length > 0) {
             const tempItems = items.filter((item) => selectFilters.includes(item.category));
             setFilteredItems(tempItems);
         } else {
             setFilteredItems(items); // Show all items if no filter is selected
         }
-    };
+    }, [selectFilters, items]);
 
     return (
         <main className="items-center justify-between">
