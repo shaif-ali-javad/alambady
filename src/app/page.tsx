@@ -144,8 +144,16 @@ export default function Home() {
     };
 
     useEffect(() => {
+        const updateFilteredItems = () => {
+            if (selectFilters.length > 0) {
+                const tempItems = items.filter((item) => selectFilters.includes(item.category));
+                setFilteredItems(tempItems);
+            } else {
+                setFilteredItems(items);
+            }
+        };
         updateFilteredItems();
-    }, [selectFilters, updateFilteredItems]);
+    }, [selectFilters, items]);
 
     const updateFilteredItems = () => {
         if (selectFilters.length > 0) {
